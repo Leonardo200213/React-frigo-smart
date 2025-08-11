@@ -1,0 +1,35 @@
+.inputLabel{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.inputLabel input{
+    display: flex;
+    width: 200px;
+    margin: 5px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    padding: 8px 12px; /*dimensione interna input*/
+}
+
+.inputLabel input[type="number"]::-webkit-outer-spin-button, .inputLabel input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.linea{
+    border: none;
+    border-top: 2px solid #e2e2e2;
+    margin: 55px 10px;
+}
+
+.addBtn{
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}

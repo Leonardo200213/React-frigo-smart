@@ -1,0 +1,72 @@
+.card {
+    margin: 0 16px 32px 16px; /*margine: 0 sopra, auto destra, 32 sotto, auto sinistra*/
+    width: 50%;
+    background-color: rgb(109, 99, 99);
+    border-radius: 15px;
+}
+
+.card:hover {
+    filter: drop-shadow(0 0 15px #f1f1f7aa); /*0 spostamento orizzontale, 0 verticale, 2em raggio bagliore*/  
+    transition: filter 300ms;
+}
+
+.listaCard {
+    display: flex;
+    justify-content: center;
+}
+
+.cardVuota{
+    filter: grayscale(1);
+}
+
+.cardVuota:hover{
+    filter: grayscale(1);
+}
+
+.qtyctrl{
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+/*button{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}*/
+
+.add{
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background-image: url(/add.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.remove{
+    background-image: url(/remove.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.add:hover{
+    filter: drop-shadow(0 0 15px #e5e6eeaa);
+}
+
+.remove:hover{
+    filter: drop-shadow(0 0 15px #e5e6eeaa);
+}

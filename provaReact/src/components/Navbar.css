@@ -1,0 +1,49 @@
+.nav{
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li{
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+li a{
+    position: relative;
+    display: flex;
+    align-items: center; /*centrati nella navbar*/
+    color: black;
+    font-size: large;
+    text-decoration: none;
+    z-index: 1; /*viene mostrato sopra a li before*/
+}
+
+li a::before{
+    content: ""; /*serve per generare tutto*/
+    position: absolute; /*posizione rispetto all'elemento relativo*/
+    left: 50%; /*aumenta a sinistra*/
+    transform: translateX(-50%); /*sposta sull'asse x di quanto è aumentato per centrarlo*/
+    width: 0;      
+    height: 100%;
+    background: rgb(209, 255, 255);
+    opacity: 0;
+    z-index: -1; /*sotto il testo ma sopra la navbar*/
+    transition: width 0.3s, opacity 0.3s;
+}
+
+li a:hover::before {
+    width: 300px;
+    opacity: 1;
+}
+
+ul{
+    list-style: none;
+    display: flex; 
+    justify-content: center; /*funziona solo con diplay flex*/
+    gap: 300px;
+    height: 100%;
+}
