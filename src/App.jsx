@@ -7,45 +7,34 @@ import Input from './components/Input.jsx';
 
 function App() {
   /*const [count, setCount] = useState(0);*/
-
-  
-  
   const [food, setFood] = useState([
-    {
-      id: 0,
-      nome: "Carote",
-      qty: 0,
-    },
-    {
-      id: 2,
-      nome: "Patate",
-      qty: 3,
-    },
-    {
-      id: 2,
-      nome: "Cipolle",
-      qty: 5,
-    },
+    { id: 0, nome: "Carote", qty: 0, },
+    { id: 1, nome: "Patate", qty: 3, },
+    { id: 2, nome: "Cipolle", qty: 5, },
   ]);
 
 
+  const addFood = (nome, qty) => {
+    setFood([...food, {id: Date.now(), nome, qty}
+    ]);
+  };
+
   return (
-  <>
-  
-    <Input></Input>
+    <>
 
+    <Input aggiungi={addFood} />
+    
     <hr className="linea" class="hr" />
-
-  <div className='listaCard'>
-      {food.map((item) => (
-        <Card
-          key={item.id}
-          nome={item.nome}
-          qtyStart={item.qty}
-        />
-      ))}
-    </div>
-  </>
+    <div className='listaCard'>
+        {food.map((item) => (
+          <Card
+            key={item.id}
+            nome={item.nome}
+            qtyStart={item.qty}
+          />
+        ))}
+      </div>
+    </>
 )}
 
 export default App;
