@@ -8,14 +8,15 @@ import Input from './components/Input.jsx';
 function App() {
   /*const [count, setCount] = useState(0);*/
   const [food, setFood] = useState([
-    { id: 0, nome: "Carote", qty: 0, },
-    { id: 1, nome: "Patate", qty: 3, },
-    { id: 2, nome: "Cipolle", qty: 5, },
+    { id: 0, nomeUp: "Carote", qty: 0, },
+    { id: 1, nomeUp: "Patate", qty: 3, },
+    { id: 2, nomeUp: "Cipolle", qty: 5, },
   ]);
 
-
+  /**funzione per aggiungere card */
   const addFood = (nome, qty) => {
-    setFood([...food, {id: Date.now(), nome, qty}
+    const nomeUp = nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase(); /**charAt recupera in posizione 0, quindi prima lettera, e mette in maiuscolo con upper case, poi aggiunge il resto con slice */
+    setFood([...food, {id: Date.now(), nomeUp, qty} /*...food serve per evitare che sostituisca i dati precedenti, così facendo li tiene e ne inserisce uno dopo */
     ]);
   };
 
@@ -29,7 +30,7 @@ function App() {
         {food.map((item) => (
           <Card
             key={item.id}
-            nome={item.nome}
+            nome={item.nomeUp}
             qtyStart={item.qty}
           />
         ))}
