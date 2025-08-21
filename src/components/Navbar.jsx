@@ -1,13 +1,20 @@
-import './Navbar.css'
+import { Link } from "react-router-dom";
+import './Navbar.css';
 
 
 function Navbar(){
     return(
         <div className='nav'>   
             <ul>
-                <li><a>Il tuo frigo</a></li>
-                <li><a>Ricette</a></li>
-                <li><a>Lista della spesa</a></li>
+                <li>
+                    <Link to="/">Il tuo frigo</Link>
+                </li>
+                <li>
+                    <Link to="/ricette">Ricette</Link>
+                </li>
+                <li>
+                    <Link>Lista della spesa</Link>
+                </li>
             </ul>
         </div>
     );
