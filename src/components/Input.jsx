@@ -21,7 +21,7 @@ function Input({ aggiungi }){
 
     return (
         <form className="inputLabel" onSubmit={handleSubmit}>
-            <h2>Aggiungi Prodotto</h2>
+            <h2>Aggiungi prodotto</h2>
             <label>Nome prodotto</label>
             <input placeholder="Inserisci nome" type="text" value={nomeP} onChange={e => setNomeP(e.target.value)}/>
             
